@@ -32,7 +32,9 @@ app.get("/decks/:deckId", getDeckController);
 app.post("/decks/:deckId/cards", createCardForDeckController);
 app.delete("/decks/:deckId/cards/:index", deleteCardOnDeckController);
 
-mongoose.connect(process.env.MONGO_URL).then(() => {
-  console.log(`listening on port ${PORT}`);
-  app.listen(PORT);
-});
+// mongoose.connect(process.env.MONGO_URL).then(() => {
+//   console.log(`listening on port ${PORT}`);
+//   app.listen(PORT);
+// });
+mongoose.connect(process.env.MONG_URL);
+module.exports = app;
