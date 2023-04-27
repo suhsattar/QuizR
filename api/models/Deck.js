@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 // const ObjectId = mongoose.Types.ObjectId;
@@ -10,4 +10,4 @@ const DeckSchema = new Schema({
 
 const DeckModel = mongoose.model("Deck", DeckSchema);
 
-export default DeckModel;
+module.exports = DeckModel;

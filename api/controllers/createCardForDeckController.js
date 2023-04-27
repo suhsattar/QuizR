@@ -1,8 +1,6 @@
-import express, { Request, Response } from "express";
+const Deck = require("../models/Deck");
 
-import Deck from "../models/Deck";
-
-export async function createCardForDeckController(req: Request, res: Response) {
+async function createCardForDeckController(req, res) {
   const deckId = req.params.deckId;
   const deck = await Deck.findById(deckId);
   if (!deck) return res.status(400).send("no deck of this id exists");
@@ -13,3 +11,4 @@ export async function createCardForDeckController(req: Request, res: Response) {
   res.json(deck);
   // output this
 }
+module.exports = { createCardForDeckController };

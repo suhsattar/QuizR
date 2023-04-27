@@ -1,8 +1,6 @@
-import express, { Request, Response } from "express";
+const Deck = require("../models/Deck");
 
-import Deck from "../models/Deck";
-
-export async function deleteCardOnDeckController(req: Request, res: Response) {
+async function deleteCardOnDeckController(req, res) {
   const deckId = req.params.deckId;
   const index = req.params.index;
 
@@ -13,3 +11,4 @@ export async function deleteCardOnDeckController(req: Request, res: Response) {
   await deck.save();
   res.json(deck);
 }
+module.exports = { deleteCardOnDeckController };
