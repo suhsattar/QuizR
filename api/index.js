@@ -25,12 +25,12 @@ app.use(
 );
 app.use(express.json());
 
-app.get("/decks", getDeckControllers);
-app.post("/decks", createDeckController);
-app.delete("/decks/:deckId", deleteDeckController);
-app.get("/decks/:deckId", getDeckController);
-app.post("/decks/:deckId/cards", createCardForDeckController);
-app.delete("/decks/:deckId/cards/:index", deleteCardOnDeckController);
+app.get("/api/decks", getDeckControllers);
+app.post("/api/decks", createDeckController);
+app.delete("/api/decks/:deckId", deleteDeckController);
+app.get("/api/decks/:deckId", getDeckController);
+app.post("/api/decks/:deckId/cards", createCardForDeckController);
+app.delete("/api/decks/:deckId/cards/:index", deleteCardOnDeckController);
 
 // mongoose.connect(process.env.MONGO_URL).then(() => {
 //   console.log(`listening on port ${PORT}`);
