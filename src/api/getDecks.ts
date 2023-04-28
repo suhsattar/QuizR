@@ -5,6 +5,6 @@ export type TDeck = {
 };
 
 export async function getDecks(): Promise<TDeck[]> {
-  const response = await fetch(`${import.meta.env.VITE_APP_API_URL}/api/decks`);
+  const response = await fetch(`${import.meta.env.VITE_APP_API_URL}/decks`);
   return response.json();
 }
