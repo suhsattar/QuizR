@@ -1,3 +1,4 @@
+import React from "react";
 import "./Header.css";
 import { Link } from "react-router-dom";
 
@@ -6,15 +7,15 @@ export default function Header() {
     <div className="Header">
       <div className="container">
         <div>
-          <a href="/">QuizR</a>
+          <Link to="/">QuizR</Link>
         </div>
 
         <div>
-          <a href="/">Decks</a>
+          <Link to="/">Decks</Link>
         </div>
 
         <div>
-          <a href="/login">login</a>
+          <Link to="/login">QuizR</Link>
         </div>
       </div>
     </div>
