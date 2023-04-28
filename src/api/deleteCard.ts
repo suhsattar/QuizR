@@ -5,7 +5,7 @@ export async function deleteCard(
   index: number
 ): Promise<TDeck> {
   const response = await fetch(
-    `${import.meta.env.VITE_APP_API_URL}}/${deckId}/cards/${index}`,
+    `${import.meta.env.VITE_APP_API_URL}}/api/${deckId}/cards/${index}`,
     {
       method: "DELETE",
     }
