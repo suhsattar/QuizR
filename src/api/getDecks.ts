@@ -1,5 +1,3 @@
-import { API_URL } from "./config";
-
 export type TDeck = {
   title: string;
   cards: string[];
@@ -7,6 +5,6 @@ export type TDeck = {
 };
 
 export async function getDecks(): Promise<TDeck[]> {
-  const response = await fetch(`${API_URL}/decks`);
+  const response = await fetch(`${import.meta.env.VITE_APP_API_URL}/decks`);
   return response.json();
 }
