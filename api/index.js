@@ -8,7 +8,7 @@ const cors = require("cors");
 //   console.log(`listening on port ${PORT}`);
 //   app.listen(PORT);
 // });
-mongoose.connect(process.env.MONG_URL);
+mongoose.connect(process.env.MONGO_URL);
 
 const { getDeckControllers } = require("./controllers/getDeckControllers");
 const { createDeckController } = require("./controllers/createDeckController");
